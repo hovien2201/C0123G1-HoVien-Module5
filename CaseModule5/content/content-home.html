@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        width: 400px;
+        height: 500px;
+        margin: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+
+      .card .image-wrapper {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease-out;
+      }
+
+      .card:hover .image-wrapper {
+        transform: scale(1.1);
+      }
+
+      .card .image-wrapper img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease-out;
+      }
+
+      .card:hover .image-wrapper img {
+        transform: scale(1.1);
+      }
+
+      .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        transition: transform 0.3s ease-out;
+      }
+
+      .card:hover .card-content {
+        transform: translateY(-100%);
+      }
+
+      .card-content h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .card-content p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.3s ease-out;
+      }
+
+      .btn:hover {
+        background-color: #0069d9;
+      }
+
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <img
+        src="https://kksapahotel.com/uploads/images/VQK_2153%20(1).jpg"
+        alt="Card Image"
+      />
+      <div class="card-content">
+        <h2>Card Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada
+          ac turpis a cursus. Donec pharetra condimentum odio non gravida. Proin
+          porttitor efficitur orci, vel commodo sem feugiat vel.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <button class="btn btn-outline-primary">haha</button>
+    </div>
+  </body>
+</html>
