@@ -1,59 +1,266 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Add New Employee</title>
 
     <!-- Meta -->
     <meta charset="utf-8" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css"
-    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css" />
 
     <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="../../static/assets/css/portal.css" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <style>
+</head>
+<style>
     .boxed {
-      width: 200px;
-      height: 700px;
-      position: relative;
-      background-clip: padding-box;
-      border: 10px solid transparent;
-      background-color: white;
-      border-radius: 20px;
-      border: 1px solid black;
+        width: 200px;
+        height: 700px;
+        position: relative;
+        background-clip: padding-box;
+        border: 10px solid transparent;
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid black;
     }
-
+    
     .mg {
-      margin-top: 23px;
+        margin-top: 23px;
     }
-  </style>
+</style>
 
-  <body>
+<body>
+    <header class="header">
+        <div class="header-mobile-info">
+            <div class="header-mobile-slide info1">
+                <div class="inside">
+                    <div class="row">
+                        <div class="col-sm">
+                            <p><i class="icon-viber"></i><a href="#">+842363845555</a></p>
+                        </div>
+                        <div class="col-sm mt-15 mt-sm-0">
+                            <p>
+                                <i class="icon-closed-envelope"></i
+                    ><a href="#">hehe@furamavietnam.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-mobile-slide info2">
+            <div id="googleMapHeader" class="google-map"></div>
+          </div>
+          <div class="header-mobile-slide info3">
+            <div class="inside">
+              <div class="visible-xs visible-sm hidden-lg hidden-md">
+                <form
+                  action="#"
+                  class="form-inline row"
+                  role="search"
+                  method="get"
+                >
+                  <div class="col pr-0">
+                    <input
+                      type="text"
+                      name="s"
+                      value=""
+                      placeholder="Search"
+                      class="form-control w-100"
+                    />
+                  </div>
+                  <div class="col-auto pl-0">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="header-mobile-slide info4">
+            <div class="inside">
+              <div class="row">
+                <div class="col-sm">
+                  <p><a href="#">English</a></p>
+                  <p><a href="#">German</a></p>
+                </div>
+                <div class="col-sm">
+                  <p><a href="#">France</a></p>
+                  <p><a href="#">Italian</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="header-content">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-auto col-sm-5 col-lg-3 d-flex align-items-center bestel-logo"
+              >
+                <a href="content-home.html" class="header-logo"
+                  ><img
+                    src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png"
+                    alt="logo "
+                    class="img-fluid"
+                /></a>
+              </div>
+              <div class="col col-md-auto col-lg-3 d-flex">
+                <div class="catalog-widget d-none d-sm-block">
+                  <div class="onloader">
+                    <img
+                      src="https://furamavietnam.com/wp-content/themes/bestel/images/ajax-loader.gif"
+                    />
+                  </div>
+                  <div class="catalog-widget-inside">
+                    <a
+                      href="https://www.tripadvisor.com/Hotel_Review-g298085-d302750-Reviews-Furama_Resort_Danang-Da_Nang_Quang_Nam_Province.html"
+                      target="_blank"
+                    >
+                      <div class="widget-tripadvisor">
+                        <div class="inside">
+                          <div class="widget-tripadvisor-logo">
+                            <img
+                              src="https://smartdata.tonytemplates.com/bestel/wp-content/uploads/2018/05/widget-tripadvisor-logo.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="widget-tripadvisor-rating">
+                            <img
+                              src="https://furamavietnam.com/wp-content/uploads/2018/08/widget-tripadvisor-rating.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="widget-tripadvisor-text">2,746 Reviews</div>
+                        </div>
+                      </div>
+                    </a>
+                    <span
+                      class="catalog-widget-toggle js-catalog-widget-toggle"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  class="catalog-widget-mobile d-flex d-sm-none align-items-center mx-auto"
+                ></div>
+              </div>
+  
+              <div class="col-sm-3 d-none d-lg-block">
+                <div class="header-contact d-flex">
+                  <div class="header-contact-icon">
+                    <i class="icon-placeholder"></i>
+                        </div>
+                        <div class="header-contact-txt">
+                            <p>
+                                103 - 105 Vo Nguyen Giap Street, Khue My Ward, Ngu Hanh Son District, Danang City, Vietnam
+                            </p>
+
+                            <p class="txt-sm"><span>7,0 km</span> from Danang Airport</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 d-none d-lg-block">
+                    <div class="header-contact d-flex">
+                        <div class="header-contact-icon">
+                            <i class="icon-telephone"></i>
+                        </div>
+                        <div class="header-contact-txt">
+                            <p class="txt-lg">84-236-3847 333/888</p>
+                        </div>
+                    </div>
+                    <div class="header-contact d-flex">
+                        <div class="header-contact-icon">
+                            <i class="icon-closed-envelope"></i>
+                        </div>
+                        <div class="header-contact-txt">
+                            <a href="mailto:reservation@furamavietnam.com">
+                      reservation@furamavietnam.com
+                    </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto ml-auto d-flex d-lg-none">
+                    <button class="navbar-btn" data-target="#modalNavigation" data-toggle="modal">
+                  <i class="icon-menu"></i>
+                </button>
+                    <div class="modal fade modal-fullscreen-menu" id="modalNavigation">
+                        <button aria-label="Close" class="close" data-dismiss="modal">
+                    <i class="icon-close"></i>CLOSE
+                  </button>
+                        <div class="modal-dialog"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="header-nav js-header-nav sticky">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="navbar-collapse">
+                        <ul id="menu-furama-resort" class="menu navbar-nav w-100 js-main-menu">
+                            <li id="nav-menu-item-2197" class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="content-home.html" class="nav-link main-menu-link">Home</a
+                    >
+                  </li>
+                  <li
+                    id="nav-menu-item-2197"
+                    class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
+                  >
+                    <a href="#" class="nav-link main-menu-link">The Resort</a>
+                            </li>
+                            <li id="nav-menu-item-1445" class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="#" class="nav-link main-menu-link">Rooms &#038; Suites</a
+                    >
+                  </li>
+                  <li
+                    id="nav-menu-item-1519"
+                    class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
+                  >
+                    <a href="#" class="nav-link main-menu-link">Culinary</a>
+                            </li>
+                            <li id="nav-menu-item-1564" class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="#" class="nav-link main-menu-link">Meeting &#038; Events</a
+                    >
+                  </li>
+                  <li
+                    id="nav-menu-item-1855"
+                    class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
+                  >
+                    <a href="#" class="nav-link main-menu-link"
+                      >Spa &#038; Fitness</a
+                    >
+                  </li>
+                  <li
+                    id="nav-menu-item-1729"
+                    class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
+                  >
+                    <a href="#" class="nav-link main-menu-link">Recreation</a>
+                            </li>
+                            <li id="nav-menu-item-1806" class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="#" class="nav-link main-menu-link">Destination</a>
+                            </li>
+                            <li id="nav-menu-item-2167" class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="#" class="nav-link main-menu-link">Special Offers</a>
+                            </li>
+                            <li id="nav-menu-item-2167" class="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="create.html" class="nav-link main-menu-link">Add Service</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
     <div class="container boxed" style="margin-top: 100px; width: 800px">
       <h2 style="text-align: center; margin-top: 20px">Add Service</h2>
 
