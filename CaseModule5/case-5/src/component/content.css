@@ -1,0 +1,58 @@
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  @media (max-width: 991.98px) {
+    .padding {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .padding {
+      padding: 1rem;
+    }
+  }
+
+  .padding {
+    padding: 5rem;
+  }
+
+  .pagination,
+  .jsgrid .jsgrid-pager {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+  }
+
+  .page-link {
+    color: black;
+  }
+
+  .pagination.pagination-rounded-flat .page-item {
+    margin: 0 0.25rem;
+  }
+
+  .pagination-rounded-flat {}
+
+  .justify-content-center {
+    text-align: center;
+  }
+
+  .pagination-success .page-item.active .page-link {
+    background: #00c689;
+    border-color: #00c689;
+  }
+
+  .pagination.pagination-rounded-flat .page-item .page-link,
+  a {
+    border: none;
+    border-radius: 50px;
+  }
+
+  .col-md-4 {
+    margin-left: 35%;
+  }

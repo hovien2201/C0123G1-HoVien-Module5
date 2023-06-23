@@ -42,16 +42,17 @@ export class StudentComponent extends React.Component {
                             <th>Address</th>
                         </tr>
                     </thead>
-                    {this.state.studentList.map((student)=> (
                     <tbody>
-                        <tr>
+
+                    {this.state.studentList.map((student)=> (
+                        <tr key={student.studentId}>
                             <td >{student.studentId}</td>
                             <td >{student.studentName}</td>
                             <td >{student.age}</td>
                             <td >{student.address}</td>
                         </tr>
-                    </tbody>
                     ))}
+                    </tbody>
                 </table>
                 </div>
             </>
