@@ -22,7 +22,7 @@ export function DeclarationComponent() {
                     numberOfHouses: '',
                     email: '',
                     phone: '',
-                    move: [],
+                    move: '',
                     symptom: [],
                     contact: []
                 }}
@@ -46,6 +46,7 @@ export function DeclarationComponent() {
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
                         setSubmitting(false)
+                        console.log(values)
                         toast('Khai báo y tế thành công!!');
                     }, 1000)
                 }}
@@ -168,12 +169,12 @@ export function DeclarationComponent() {
                                     <ErrorMessage name="email" component='span' className="error-mess" />
                                 </div>
                                 <div className="mb-3">
-                                <h3>Trong vòng 14 ngày qua Anh/chị có đến quốc gia vùng lãnh thỗ nào(có thể đi qua nhiều quốc gia)</h3>
+                                <h5>Trong vòng 14 ngày qua Anh/chị có đến quốc gia vùng lãnh thỗ nào(có thể đi qua nhiều quốc gia)</h5>
                                     <Field type="text" className="form-control" as="textarea"
                                         name="move"
                                     />
                                 </div>
-                                <h3>Trong vòng 14 ngày qua Anh/chị có xuất hiện triệu chứng nào sau đây không?</h3>
+                                <h5>Trong vòng 14 ngày qua Anh/chị có xuất hiện triệu chứng nào sau đây không?</h5>
                                 <div className="mb-3 d-flex">
                                     <Field type="checkbox" className="form-check-input"
                                         value="sốt"
@@ -224,7 +225,7 @@ export function DeclarationComponent() {
 
 
 
-                                <h3>Trong vòng 14 ngày qua Anh/chị có tiếp xúc với?</h3>
+                                <h5>Trong vòng 14 ngày qua Anh/chị có tiếp xúc với?</h5>
                                 <div className="mb-3 d-flex">
                                     <Field type="checkbox" className="form-check-input"
                                         value="Người bệnh hoặc nghi ngờ, mắc bệnh COVID-19"
