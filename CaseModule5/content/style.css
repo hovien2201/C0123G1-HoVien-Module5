@@ -14540,7 +14540,7 @@ a.link-whatsapp:hover [class*='icon-'] {
 .catalog-widget {
     position: relative;
     min-height: 86px;
-    s display: inline-block;
+    display: inline-block;
     top: 4px;
 }
 

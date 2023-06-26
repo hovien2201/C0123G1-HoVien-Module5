@@ -22,9 +22,9 @@ export function DeclarationComponent() {
                     numberOfHouses: '',
                     email: '',
                     phone: '',
-                    move: '',
-                    symptom: '',
-                    contact: ''
+                    move: [],
+                    symptom: [],
+                    contact: []
                 }}
                 validationSchema={Yup.object(
                     {
