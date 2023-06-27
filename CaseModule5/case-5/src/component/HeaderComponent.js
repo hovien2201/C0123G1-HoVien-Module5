@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import './component/header-footer.css'
-
+import { NavLink } from "react-router-dom";
 export function HeaderComponent() {
   return (
     <>
@@ -192,9 +192,9 @@ export function HeaderComponent() {
                   id="nav-menu-item-2197"
                   className="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="content-home.html" className="nav-link main-menu-link">
+                  <NavLink to="/" className="nav-link main-menu-link">
                     Home
-                  </a>
+                  </NavLink>
                 </li>
                 <li
                   id="nav-menu-item-2197"
@@ -248,25 +248,25 @@ export function HeaderComponent() {
                   id="nav-menu-item-1806"
                   className="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="#" className="nav-link main-menu-link">
-                    Destination
-                  </a>
+                  <NavLink to="/customer" className="nav-link main-menu-link">
+                    CustomerList
+                  </NavLink>
                 </li>
                 <li
                   id="nav-menu-item-2167"
                   className="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="#" className="nav-link main-menu-link">
-                    Special Offers
-                  </a>
+                  <NavLink to="/editService" className="nav-link main-menu-link">
+                    Edit Service
+                  </NavLink>
                 </li>
                 <li
                   id="nav-menu-item-2167"
                   className="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="create.html" className="nav-link main-menu-link">
+                  <NavLink to="/createService" className="nav-link main-menu-link">
                     Add Service
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>

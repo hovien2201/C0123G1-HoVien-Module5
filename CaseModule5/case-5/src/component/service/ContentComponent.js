@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './content.css'
+import { NavLink } from "react-router-dom";
 
 export function ContentComponent() {
     return (
