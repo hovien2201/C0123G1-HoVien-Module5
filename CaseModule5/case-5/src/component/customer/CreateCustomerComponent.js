@@ -12,6 +12,7 @@ export function CreateCustomer() {
         <>
 
             <div className="container1">
+               
                 <div className="text">Add new Customer</div>
                 <form action="#">
                     <div className="form-row">
@@ -57,12 +58,14 @@ export function CreateCustomer() {
                             <div className="underline" />
                             <label htmlFor="">Customer Type</label>
                             <br />
-                            <button className="button" type="submit">
+                            <button className="button" type="submit" style={{color:"blue"}} >
                                 Save
                             </button>
                         </div>
                     </div>
                 </form>
+                <NavLink to="/customer"><button type="button" className="button" style={{marginLeft:"70%" ,color:"red"}}
+                >Back</button></NavLink>
             </div>
 
         </>

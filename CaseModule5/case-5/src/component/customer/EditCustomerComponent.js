@@ -63,6 +63,8 @@ export function EditCustomer() {
                         </div>
                     </div>
                 </form>
+                <NavLink to="/customer"><button type="button" className="button" style={{marginLeft:"70%" ,color:"red"}}
+                >Back</button></NavLink>
             </div>
 
         </>
