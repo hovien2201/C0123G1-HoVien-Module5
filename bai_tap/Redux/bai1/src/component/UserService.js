@@ -3,10 +3,10 @@ const findAll = () => {
     return request.get('/users')
 }
 const save = (user) => {
-    return request.post('/users',user)
+    return request.post('/users', user)
 }
 const deleteU = (id) => {
-    return request.delete('/users/'+id)
+    return request.delete('/users/' + id)
 }
 const userService = {
     findAll,
