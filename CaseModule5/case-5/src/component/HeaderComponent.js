@@ -240,9 +240,9 @@ export function HeaderComponent() {
                   id="nav-menu-item-1729"
                   className="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="#" className="nav-link main-menu-link">
-                    Recreation
-                  </a>
+                  <NavLink to="/contact" className="nav-link main-menu-link">
+                    Contact 
+                  </NavLink>
                 </li>
                 <li
                   id="nav-menu-item-1806"
@@ -275,6 +275,18 @@ export function HeaderComponent() {
       </div>
 
     </header>
+    <main
+  id="intro"
+  className="bg-image"
+  style={{
+    backgroundImage: "url(https://mdbootstrap.com/img/new/fluid/city/018.jpg)",
+    height: "60vh",
+    width: "100%",
+  
+  }}
+>
+  <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }} />
+</main>
     </>
   )
 }
