@@ -9,6 +9,15 @@ import { NavLink } from "react-router-dom";
 
 export function ContactList() {
     const [contract, setContract] = useState([])
+    const [customer,setCustomer] =useState([])
+    const getAllCus = async () =>{
+        try {
+            const result = await axios.get('http://localhost:8080/customer')
+            setCustomer(result.data)
+        } catch (e) {
+            console.log(e)
+        }
+    }
     const fetchApi = async () => {
         try {
             const result = await axios.get('http://localhost:8080/contract')
@@ -18,9 +27,12 @@ export function ContactList() {
         }
     }
     useEffect(() => {
-
+        getAllCus()
         fetchApi()
     }, [])
+    if(!customer){
+        return null
+    }
 
     return (
         <>
@@ -36,7 +48,8 @@ export function ContactList() {
                 <table className="table  table-hover text-center">
                     <thead className="table-light">
                         <tr>
-                            <th>Id</th>
+                            <th>Contract Code</th>
+                            <th>Customer Name</th>
                             <th>Day start</th>
                             <th>Day end</th>
                             <th>Advance deposit amount(VND)</th>
@@ -48,6 +61,8 @@ export function ContactList() {
                             contract.map((contract) => (
                                 <tr key={contract.id}>
                                     <td>{contract.contractCode}</td>
+                                    <td>{customer.find((cus) => cus.id ==contract.customerId).name}</td>
+                                    {/* <td>{contract.customerId}</td> */}
                                     <td>{contract.dayStart}</td>
                                     <td>{contract.endDay}</td>
                                     <td>{contract.deposit}</td>

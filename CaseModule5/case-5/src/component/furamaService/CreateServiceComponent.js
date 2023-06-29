@@ -53,16 +53,16 @@ export function CreateServiceComponent() {
                         .min(0, 'Lớn hơn 0'),
                     rentalType: Yup.string()
                         .required('Không được để trống'),
-                    descriptionOtherUtilities: Yup.string()
-                        .required('Không được để trống'),
-                    roomStandard: Yup.string()
-                        .required('Không được để trống'),
-                    numberFloors: Yup.number()
-                        .required('Không được để trống')
-                        .min(0, 'Lớn hơn 0'),
-                    poolArea: Yup.number()
-                        .required('Không được để trống')
-                        .min(0, 'Lớn hơn 0'),
+                    // descriptionOtherUtilities: Yup.string()
+                    //     .required('Không được để trống'),
+                    // roomStandard: Yup.string()
+                    //     .required('Không được để trống'),
+                    // numberFloors: Yup.number()
+                    //     .required('Không được để trống')
+                    //     .min(0, 'Lớn hơn 0'),
+                    // poolArea: Yup.number()
+                    //     .required('Không được để trống')
+                    //     .min(0, 'Lớn hơn 0'),
                     img: Yup.string()
                         .required('Không được để trống')
 
@@ -74,7 +74,7 @@ export function CreateServiceComponent() {
                         Swal.fire({
                             icon: "success",
                             title: "Thêm mới thành công",
-                            timer: "2000"
+                            timer: "3000"
                         })
                         console.log(values)
                         navigate("/")
@@ -161,7 +161,7 @@ export function CreateServiceComponent() {
                                             as="select"
                                         >
                                             <option value="" >
-                                                --Loại hình cho thuê--
+                                                --Chọn loại hình cho thuê--
                                             </option>
                                             <option value="Year">Year</option>
                                             <option value="Month" >Month</option>

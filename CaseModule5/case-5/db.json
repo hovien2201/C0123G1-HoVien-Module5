@@ -87,6 +87,39 @@
       "email": "nguyenthangfa2001@gmail.com",
       "address": "Đà Nẵng",
       "id": 8
+    },
+    {
+      "name": "Ho Vien",
+      "type": "Platinum",
+      "dayOfBirth": "2023-06-01",
+      "gender": "Nữ",
+      "identityCard": 213213,
+      "phoneNumber": 231321321321,
+      "email": "sdadas",
+      "address": "dsadsa",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "Thang Ben",
+      "type": "Gold",
+      "dayOfBirth": "2023-06-24",
+      "gender": "Nữ",
+      "identityCard": 1111111111,
+      "phoneNumber": 2222222222222,
+      "email": "hoang ngu",
+      "address": "đâs"
+    },
+    {
+      "id": 11,
+      "name": "Ngoc Luyen",
+      "type": "Platinum",
+      "dayOfBirth": "2023-06-22",
+      "gender": "Nữ",
+      "identityCard": 1231232131,
+      "phoneNumber": 12312321321,
+      "email": "luyen@gmail.com",
+      "address": "Liên chiểu"
     }
   ],
   "contract": [
@@ -96,6 +129,7 @@
       "dayStart": "27/06/2023",
       "endDay": "30/06/2023",
       "deposit": "500 VND",
+      "customerId": "1",
       "totalMoney": "2000.000 VND"
     },
     {
@@ -104,6 +138,7 @@
       "dayStart": "25/06/2023",
       "endDay": "27/06/2023",
       "deposit": "400 VND",
+      "customerId": "2",
       "totalMoney": "1500.000 VND"
     },
     {
@@ -112,6 +147,7 @@
       "endDay": "2023-06-24",
       "deposit": 23,
       "totalMoney": 123,
+      "customerId": "4",
       "id": 3
     },
     {
@@ -120,6 +156,7 @@
       "endDay": "2023-06-17",
       "deposit": 2,
       "totalMoney": 3333,
+      "customerId": "6",
       "id": 4
     },
     {
@@ -128,6 +165,7 @@
       "endDay": "2023-06-30",
       "deposit": 2,
       "totalMoney": 3,
+      "customerId": "7",
       "id": 5
     },
     {
@@ -135,8 +173,27 @@
       "dayStart": "2023-07-08",
       "endDay": "2023-09-01",
       "deposit": 232,
+      "customerId": "8",
       "totalMoney": 321321,
       "id": 6
+    },
+    {
+      "contractCode": "HD-232",
+      "dayStart": "2023-06-09",
+      "endDay": "2031-07-24",
+      "deposit": 214,
+      "totalMoney": 214,
+      "customerId": "3",
+      "id": 7
+    },
+    {
+      "contractCode": "HD-7",
+      "dayStart": "2023-06-14",
+      "endDay": "2023-07-08",
+      "deposit": 24242420000,
+      "totalMoney": 10000000000,
+      "customerId": "9",
+      "id": 8
     }
   ],
   "facility": [
@@ -164,20 +221,23 @@
       "id": 1,
       "type": "Room",
       "name": "Twin",
-      "area": 50,
-      "rentalCost": "100 $",
-      "maxPeople": "3",
+      "area": 500,
+      "rentalCost": "1000",
+      "maxPeople": "32",
       "rentalType": "Day",
       "img": "https://booking-static.vinpearl.com/room_types/6566f8500c334c14b7c9a6595a04b2c9_D8H_7166.jpg"
     },
     {
       "id": 2,
-      "type": "Room",
+      "type": "House",
       "name": "Deluxe",
       "area": 100,
-      "rentalCost": "120 $",
+      "rentalCost": "120 ",
       "maxPeople": "2",
       "rentalType": "Day",
+      "descriptionOtherUtilities": "Nha bep",
+      "roomStandard": "Best",
+      "numberFloors": 4,
       "img": "https://booking-static.vinpearl.com/room_types/363438a81590466697fafaad3eb2ac97_POP_0790.jpg"
     },
     {
@@ -251,38 +311,24 @@
       "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/429302385.jpg?k=4a999e5f7efce5f168c08a659ce858055b7796be9fa0fbd375228eb692f803d7&o=&hp=1"
     },
     {
+      "id": 10,
       "type": "Villa",
-      "name": "oppo",
-      "area": 23,
-      "rentalCost": "ewq",
-      "maxPeople": "",
+      "name": "Villa Of Hoang",
+      "area": 230,
+      "rentalCost": "2",
+      "maxPeople": "10",
       "rentalType": "Day",
       "descriptionOtherUtilities": "ewq",
       "roomStandard": "2",
       "numberFloors": 2,
       "poolArea": "2",
       "freeServiceIncluded": "",
-      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
-      "id": 10
+      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg"
     },
     {
-      "type": "House",
-      "name": "23",
-      "area": 23,
-      "rentalCost": "2",
-      "maxPeople": "2",
-      "rentalType": "Year",
-      "descriptionOtherUtilities": "22",
-      "roomStandard": "213",
-      "numberFloors": 2,
-      "poolArea": "",
-      "freeServiceIncluded": "",
-      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
-      "id": 11
-    },
-    {
+      "id": 12,
       "type": "Villa",
-      "name": "Ho Vien",
+      "name": "Villla Room So211",
       "area": 4,
       "rentalCost": "12321",
       "maxPeople": "2",
@@ -292,8 +338,22 @@
       "numberFloors": 2,
       "poolArea": "2",
       "freeServiceIncluded": "",
+      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg"
+    },
+    {
+      "type": "Room",
+      "name": "Room Vip",
+      "area": 1000,
+      "rentalCost": "1000000",
+      "maxPeople": "5",
+      "rentalType": "Year",
+      "descriptionOtherUtilities": "",
+      "roomStandard": "",
+      "numberFloors": "",
+      "poolArea": "",
+      "freeServiceIncluded": "",
       "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
-      "id": 12
+      "id": 14
     }
   ]
 }

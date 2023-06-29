@@ -50,8 +50,7 @@ export function EditServiceComponent() {
                     type: Yup.string()
                         .required('Không được để trống'),
                     name: Yup.string()
-                        .required('Không được để trống')
-                        .matches(/^[A-Z][a-z]*(\s[A-Z][a-z]*)+$/, 'Không được là số'),
+                        .required('Không được để trống'),
                     area: Yup.number()
                         .required('Không được để trống')
                         .min(0, 'Lớn hơn 0'),
@@ -62,16 +61,16 @@ export function EditServiceComponent() {
                         .min(0, 'Lớn hơn 0'),
                     rentalType: Yup.string()
                         .required('Không được để trống'),
-                    descriptionOtherUtilities: Yup.string()
-                        .required('Không được để trống'),
-                    roomStandard: Yup.string()
-                        .required('Không được để trống'),
-                    numberFloors: Yup.number()
-                        .required('Không được để trống')
-                        .min(0, 'Lớn hơn 0'),
-                    poolArea: Yup.number()
-                        .required('Không được để trống')
-                        .min(0, 'Lớn hơn 0'),
+                    // descriptionOtherUtilities: Yup.string()
+                    //     .required('Không được để trống'),
+                    // roomStandard: Yup.string()
+                    //     .required('Không được để trống'),
+                    // numberFloors: Yup.number()
+                    //     .required('Không được để trống')
+                    //     .min(0, 'Lớn hơn 0'),
+                    // poolArea: Yup.number()
+                    //     .required('Không được để trống')
+                    //     .min(0, 'Lớn hơn 0'),
                     img: Yup.string()
                         .required('Không được để trống')
 
@@ -79,14 +78,11 @@ export function EditServiceComponent() {
                 onSubmit={(values, { setSubmitting }) => {
                     const update = async () => {
                         setSubmitting(false)
-                    
-                         
-                        
                         await axios.put('http://localhost:8080/service/'+values.id, values)
                         Swal.fire({
                             icon: "success",
                             title: "Chỉnh sửa thành công",
-                            timer: "2000"
+                            timer: "3000"
                         })
                         
                         navigate("/")
@@ -261,7 +257,7 @@ export function EditServiceComponent() {
                                     </div>
                                     <div className="text-center m-auto mt-4">
                                         <button type="submit" className=" btn btn-success ">
-                                            <b className="text-center">Add new</b>
+                                            <b className="text-center">Save</b>
                                         </button>
                                     </div>
                                 </Form>

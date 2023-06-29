@@ -23,7 +23,7 @@ export function ContentComponent() {
         Swal.fire({
             icon: "success",
             title: "Delete success",
-            timer: "2000"
+            timer: "3000"
         })
         fetchApi()
     }
