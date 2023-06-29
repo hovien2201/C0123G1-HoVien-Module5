@@ -24,45 +24,45 @@
     },
     {
       "name": "nguyễn thị thanh nga ",
-      "type": "",
+      "type": "Silver",
       "dayOfBirth": "2023-07-01",
-      "gender": "",
+      "gender": "Nu",
       "identityCard": 2012154215,
       "phoneNumber": 788391953,
-      "email": "",
+      "email": "nga@gmail.com",
       "address": "Đà Nẵng",
       "id": 3
     },
     {
       "name": "Nguyễn Đức Thắng",
-      "type": "",
+      "type": "Gold",
       "dayOfBirth": "2023-06-15",
-      "gender": "",
+      "gender": "Nu",
       "identityCard": 2018181817,
       "phoneNumber": 782391943,
-      "email": "",
+      "email": "thangngao@gmail.com",
       "address": "Đà Nẵng",
       "id": 4
     },
     {
       "name": "Khanh Ga",
-      "type": "",
+      "type": "Platinum",
       "dayOfBirth": "2023-06-23",
-      "gender": "",
+      "gender": "Nam",
       "identityCard": 201414141,
       "phoneNumber": 782391943,
-      "email": "",
+      "email": "khangngongao@gmail.com",
       "address": "Đà Nẵng",
       "id": 5
     },
     {
       "name": "Nguyễn Đức Thắng",
-      "type": "",
+      "type": "Silver",
       "dayOfBirth": "2023-06-16",
-      "gender": "",
+      "gender": "Nu",
       "identityCard": 201854245,
       "phoneNumber": 788391953,
-      "email": "",
+      "email": "thangcuibap@gmail.com",
       "address": "Đà Nẵng",
       "id": 6
     },
@@ -70,7 +70,7 @@
       "name": "Đinh Nguyen",
       "type": "Silver",
       "dayOfBirth": "2023-06-15",
-      "gender": "FeMale",
+      "gender": "Nam",
       "identityCard": 2012121214,
       "phoneNumber": 782391943,
       "email": "thaodinh@gmail.com",
@@ -81,7 +81,7 @@
       "name": "Nguyen Huy Hoang",
       "type": "Platinum",
       "dayOfBirth": "2023-06-14",
-      "gender": "",
+      "gender": "Nam",
       "identityCard": 201854945,
       "phoneNumber": 909123837,
       "email": "nguyenthangfa2001@gmail.com",
@@ -129,6 +129,14 @@
       "deposit": 2,
       "totalMoney": 3,
       "id": 5
+    },
+    {
+      "contractCode": "HD-23",
+      "dayStart": "2023-07-08",
+      "endDay": "2023-09-01",
+      "deposit": 232,
+      "totalMoney": 321321,
+      "id": 6
     }
   ],
   "facility": [
@@ -241,6 +249,51 @@
       "maxPeople": "10",
       "rentalType": "Day",
       "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/429302385.jpg?k=4a999e5f7efce5f168c08a659ce858055b7796be9fa0fbd375228eb692f803d7&o=&hp=1"
+    },
+    {
+      "type": "Villa",
+      "name": "oppo",
+      "area": 23,
+      "rentalCost": "ewq",
+      "maxPeople": "",
+      "rentalType": "Day",
+      "descriptionOtherUtilities": "ewq",
+      "roomStandard": "2",
+      "numberFloors": 2,
+      "poolArea": "2",
+      "freeServiceIncluded": "",
+      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
+      "id": 10
+    },
+    {
+      "type": "House",
+      "name": "23",
+      "area": 23,
+      "rentalCost": "2",
+      "maxPeople": "2",
+      "rentalType": "Year",
+      "descriptionOtherUtilities": "22",
+      "roomStandard": "213",
+      "numberFloors": 2,
+      "poolArea": "",
+      "freeServiceIncluded": "",
+      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
+      "id": 11
+    },
+    {
+      "type": "Villa",
+      "name": "Ho Vien",
+      "area": 4,
+      "rentalCost": "12321",
+      "maxPeople": "2",
+      "rentalType": "Month",
+      "descriptionOtherUtilities": "sadasdsa",
+      "roomStandard": "213",
+      "numberFloors": 2,
+      "poolArea": "2",
+      "freeServiceIncluded": "",
+      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
+      "id": 12
     }
   ]
 }

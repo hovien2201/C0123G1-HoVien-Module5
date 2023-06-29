@@ -275,18 +275,7 @@ export function HeaderComponent() {
       </div>
 
     </header>
-    <main
-  id="intro"
-  className="bg-image"
-  style={{
-    backgroundImage: "url(https://mdbootstrap.com/img/new/fluid/city/018.jpg)",
-    height: "60vh",
-    width: "100%",
-  
-  }}
->
-  <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }} />
-</main>
+    
     </>
   )
 }

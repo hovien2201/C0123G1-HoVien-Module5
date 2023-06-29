@@ -7,23 +7,23 @@ import { FallingLines, FidgetSpinner, ThreeDots } from "react-loader-spinner";
 import { NavLink } from "react-router-dom";
 
 export function CustomerList() {
+    const [customers, setCustomer] = useState([])
+    const fetchApi = async () => {
+        try {
+            const result = await axios.get('http://localhost:8080/customer')
+            setCustomer(result.data)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    useEffect(() => {
 
-    // const fetchApi = async () => {
-    //     try {
-    //         const result = await axios.get('http://localhost:8080/customer')
-    //         setLibrary(result.data)
-    //     } catch (e) {
-    //         console.log(e)
-    //     }
-    // }
-    // useEffect(() => {
-
-    //     fetchApi()
-    // }, [])
+        fetchApi()
+    }, [])
 
     return (
         <>
-            <div className="body-content container-fluid" style={{  marginTop: "2%" }}>
+            <div className="body-content container-fluid" style={{ marginTop: "2%" }}>
                 <h1 className="text text-1 text-center">Customer List</h1>
                 <NavLink
                     to="/createCustomer"
@@ -47,52 +47,34 @@ export function CustomerList() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Huỳnh Đức Định</td>
-                            <td>09-08-2002</td>
-                            <td>Nam</td>
-                            <td>206379735</td>
-                            <td>0999888555</td>
-                            <td>heeyeon0982002@gmail.com</td>
-                            <td>Diamond</td>
-                            <td>
-                                <NavLink to={`/editCustomer/1`} className="btn btn-info">
-                                    Edit
-                                </NavLink>
-                                <a
-                                    href=""
-                                    className="btn btn-danger"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal"
-                                >
-                                    Delete
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Hồ Viễn</td>
-                            <td>22-01-2001</td>
-                            <td>Nam</td>
-                            <td>1222666588</td>
-                            <td>0867561009</td>
-                            <td>hovien30122017@gmail.com</td>
-                            <td>Diamond</td>
-                            <td>
-                                <NavLink to={`/editCustomer/1`} className="btn btn-info">
-                                    Edit
-                                </NavLink>
-                                <a
-                                    href=""
-                                    className="btn btn-danger"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal"
-                                >
-                                    Delete
-                                </a>
-                            </td>
-                        </tr>
+                        {
+                            customers.map((cus) => (
+                                <tr>
+                                    <td>{cus.id}</td>
+                                    <td>{cus.name}</td>
+                                    <td>{cus.dayOfBirth}</td>
+                                    <td>{cus.gender}</td>
+                                    <td>{cus.identityCard}</td>
+                                    <td>{cus.phoneNumber}</td>
+                                    <td>{cus.email}</td>
+                                    <td>{cus.type}</td>
+                                    <td>
+                                        <NavLink to={`/editCustomer/${cus.id}`} className="btn btn-info">
+                                            Edit
+                                        </NavLink>
+                                        <a
+                                            href=""
+                                            className="btn btn-danger"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                        >
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            ))
+                        }
                     </tbody>
                 </table>
                 <div className="page-content page-container" id="page-content">

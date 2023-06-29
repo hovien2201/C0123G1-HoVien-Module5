@@ -3,9 +3,9 @@ import {BrowserRouter, Routes,Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HeaderComponent } from './component/HeaderComponent';
 import { FooterComponent } from './component/FooterComponent';
-import {  ContentComponent } from './component/service/ContentComponent';
-import { CreateServiceComponent } from './component/service/CreateServiceComponent';
-import { EditServiceComponent } from './component/service/EditServiceComponent';
+import {  ContentComponent } from './component/furamaService/ContentComponent';
+import { CreateServiceComponent } from './component/furamaService/CreateServiceComponent';
+import { EditServiceComponent } from './component/furamaService/EditServiceComponent';
 import { CustomerList } from './component/customer/CustomerListComponent';
 import { EditCustomer } from './component/customer/EditCustomerComponent';
 import { CreateCustomer } from './component/customer/CreateCustomerComponent';
