@@ -252,14 +252,14 @@ export function HeaderComponent() {
                     CustomerList
                   </NavLink>
                 </li>
-                <li
+                {/* <li
                   id="nav-menu-item-2167"
                   className="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                 >
                   <NavLink to="/editService" className="nav-link main-menu-link">
                     Edit Service
                   </NavLink>
-                </li>
+                </li> */}
                 <li
                   id="nav-menu-item-2167"
                   className="nav-item menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"

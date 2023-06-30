@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as Yup from "yup"
-import { FallingLines, FidgetSpinner, ThreeDots } from "react-loader-spinner";
-import { NavLink, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export function CreateServiceComponent() {
@@ -135,7 +133,8 @@ export function CreateServiceComponent() {
                                     <div className="row mt-4  ">
                                         <div className="col-md-6 form-group">
                                             <Field
-                                                type="text"
+                                                type="number"
+                                                min="0"
                                                 name="rentalCost"
                                                 className="form-control"
                                                 placeholder="Chi phí thuê"
@@ -178,42 +177,15 @@ export function CreateServiceComponent() {
                                                 className="form-control"
 
                                                 name="descriptionOtherUtilities"
-                                                placeholder="Mô tả các tiện ích khác(Villa,House)"
+                                                placeholder="Mô tả các tiện ích khác"
                                             />
                                             <ErrorMessage name="descriptionOtherUtilities" component="span" className="error-r" />
                                         </div>
                                         : ''
                                     }
                                     <div className="row mt-4 ">
-                                        {type !== 'Room' ?
+                                    {type === 'Villa' ?
                                             <div className="col-md-6 form-group">
-                                                <Field
-                                                    type="text"
-                                                    name="roomStandard"
-                                                    className="form-control"
-                                                    placeholder="Tiêu chuẩn phòng(Villa,House)"
-                                                />
-                                                <ErrorMessage name="roomStandard" component="span" className="error-r" />
-                                            </div>
-                                            : ''
-                                        }
-                                        {type !== 'Room' ?
-                                            <div className="col-md-6 form-group mt-3 mt-md-0">
-                                                <Field
-                                                    type="number"
-                                                    className="form-control"
-                                                    name="numberFloors"
-                                                    placeholder="Số tầng(Villa,House)"
-                                                />
-                                                <ErrorMessage name="numberFloors" component="span" className="error-r" />
-
-                                            </div>
-                                            : ''
-                                        }
-                                    </div>
-                                    <div className="row mt-2">
-                                        {type === 'Villa' ?
-                                            <div className="col-md-12 form-group">
                                                 <Field
                                                     type="text"
                                                     name="poolArea"
@@ -222,6 +194,34 @@ export function CreateServiceComponent() {
                                                 />
                                                 <ErrorMessage name="poolArea" component="span" className="error-r" />
 
+                                            </div>
+                                            : ''
+                                        }
+                                        
+                                        {type !== 'Room' ?
+                                            <div className="col-md-6 form-group mt-3 mt-md-0">
+                                                <Field
+                                                    type="number"
+                                                    className="form-control"
+                                                    name="numberFloors"
+                                                    placeholder="Số tầng"
+                                                />
+                                                <ErrorMessage name="numberFloors" component="span" className="error-r" />
+
+                                            </div>
+                                            : ''
+                                        }
+                                    </div>
+                                    <div className="row mt-2">
+                                    {type !== 'Room' ?
+                                            <div className="col-md-12 form-group">
+                                                <Field
+                                                    type="text"
+                                                    name="roomStandard"
+                                                    className="form-control"
+                                                    placeholder="Tiêu chuẩn phòng"
+                                                />
+                                                <ErrorMessage name="roomStandard" component="span" className="error-r" />
                                             </div>
                                             : ''
                                         }

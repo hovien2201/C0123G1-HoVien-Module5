@@ -100,17 +100,6 @@
       "id": 9
     },
     {
-      "id": 10,
-      "name": "Thang Ben",
-      "type": "Gold",
-      "dayOfBirth": "2023-06-24",
-      "gender": "Nữ",
-      "identityCard": 1111111111,
-      "phoneNumber": 2222222222222,
-      "email": "hoang ngu",
-      "address": "đâs"
-    },
-    {
       "id": 11,
       "name": "Ngoc Luyen",
       "type": "Platinum",
@@ -130,7 +119,7 @@
       "endDay": "30/06/2023",
       "deposit": "500 VND",
       "customerId": "1",
-      "totalMoney": "2000.000 VND"
+      "totalMoney": 2000000
     },
     {
       "id": 2,
@@ -139,7 +128,7 @@
       "endDay": "27/06/2023",
       "deposit": "400 VND",
       "customerId": "2",
-      "totalMoney": "1500.000 VND"
+      "totalMoney": 1500000
     },
     {
       "contractCode": "asdsa",
@@ -194,6 +183,67 @@
       "totalMoney": 10000000000,
       "customerId": "9",
       "id": 8
+    },
+    {
+      "dayStart": "2023-06-02",
+      "endDay": "2023-06-28",
+      "deposit": 3,
+      "customerId": "3",
+      "serviceId": "5",
+      "id": 9
+    },
+    {
+      "dayStart": "2023-06-21",
+      "endDay": "2023-06-27",
+      "deposit": 1,
+      "customerId": "5",
+      "serviceId": "6",
+      "id": 10
+    },
+    {
+      "dayStart": "2023-05-31",
+      "endDay": "2023-06-22",
+      "deposit": 2,
+      "totalMoney": 10004,
+      "customerId": "9",
+      "serviceId": "5",
+      "id": 11
+    },
+    {
+      "dayStart": "2023-06-15",
+      "endDay": "2023-07-01",
+      "deposit": 2,
+      "totalMoney": 800,
+      "customerId": "4",
+      "serviceId": "7",
+      "id": 12
+    },
+    {
+      "dayStart": "2023-06-03",
+      "endDay": "2023-06-17",
+      "deposit": 2,
+      "totalMoney": 400,
+      "customerId": "4",
+      "serviceId": "5",
+      "id": 13
+    },
+    {
+      "dayStart": "2023-06-24",
+      "endDay": "2023-06-16",
+      "deposit": 3,
+      "totalMoney": 300,
+      "customerId": "2",
+      "serviceId": "4",
+      "id": 14
+    },
+    {
+      "dayStart": "2023-06-24",
+      "endDay": "2023-06-29",
+      "deposit": 1000,
+      "totalMoney": 1500,
+      "customerId": "4",
+      "serviceId": "9",
+      "id": 15
     }
   ],
   "facility": [
@@ -202,7 +252,7 @@
       "type": "Room",
       "name": "Twin",
       "area": 50,
-      "rentalCost": "800.000 VND",
+      "rentalCost": "800.000",
       "maxPeople": "3",
       "rentalType": "Day"
     },
@@ -211,7 +261,7 @@
       "type": "House",
       "name": "House Luxury",
       "area": 100,
-      "rentalCost": "1.200.000 VND",
+      "rentalCost": "1.200.000",
       "maxPeople": "5",
       "rentalType": "Day"
     }
@@ -222,7 +272,7 @@
       "type": "Room",
       "name": "Twin",
       "area": 500,
-      "rentalCost": "1000",
+      "rentalCost": 1000,
       "maxPeople": "32",
       "rentalType": "Day",
       "img": "https://booking-static.vinpearl.com/room_types/6566f8500c334c14b7c9a6595a04b2c9_D8H_7166.jpg"
@@ -232,7 +282,7 @@
       "type": "House",
       "name": "Deluxe",
       "area": 100,
-      "rentalCost": "120 ",
+      "rentalCost": 120,
       "maxPeople": "2",
       "rentalType": "Day",
       "descriptionOtherUtilities": "Nha bep",
@@ -245,7 +295,7 @@
       "type": "Room",
       "name": "Bungalow",
       "area": 100,
-      "rentalCost": "150 $",
+      "rentalCost": 150,
       "maxPeople": "4",
       "rentalType": "Day",
       "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/442448238.jpg?k=a8e54edc723efd520c7af73f0ab070e973ceb5e1b158b55a59ebad9899455e67&o=&hp=1"
@@ -255,7 +305,7 @@
       "type": "House",
       "name": "House Luxury",
       "area": 100,
-      "rentalCost": "300 $",
+      "rentalCost": 300,
       "maxPeople": "5",
       "rentalType": "Day",
       "img": "https://file4.batdongsan.com.vn/resize/745x510/2020/03/14/20200314141129-a0fd_wm.jpg"
@@ -265,7 +315,7 @@
       "type": "House",
       "name": "House Vintage",
       "area": 100,
-      "rentalCost": "400$",
+      "rentalCost": 400,
       "maxPeople": "6",
       "rentalType": "Day",
       "img": "https://ik.imagekit.io/tvlk/blog/2019/12/nhung-resort-dep-o-phu-quoc-The-Garden-House-Phu-Quoc-2.jpg?tr=dpr-2,w-675"
@@ -275,7 +325,7 @@
       "type": "House",
       "name": "Chilling House",
       "area": 100,
-      "rentalCost": "500 $",
+      "rentalCost": 500,
       "maxPeople": "7",
       "rentalType": "Day",
       "img": "https://angcovat.vn/imagesdata/TIN327127/2-cac-mau-bungalow-trong-resort-dep.jpg"
@@ -285,7 +335,7 @@
       "type": "House",
       "name": "Villa",
       "area": 100,
-      "rentalCost": "800 $",
+      "rentalCost": 800,
       "maxPeople": "5",
       "rentalType": "Day",
       "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/268611340.jpg?k=8166d9af187ec6951fcf8b8a047b20c7cc950f9d2f74f361a6ea6480b04a6d33&o=&hp=1"
@@ -295,9 +345,13 @@
       "type": "Villa",
       "name": "Villa Relax",
       "area": 200,
-      "rentalCost": "1000 $",
+      "rentalCost": 1000,
       "maxPeople": "7",
       "rentalType": "Day",
+      "descriptionOtherUtilities": "213",
+      "roomStandard": "dfa",
+      "numberFloors": 2,
+      "poolArea": "2",
       "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/209186162.jpg?k=fee2bce064332027412a08d9b2e11585f376587a1b8fc952460ec2d09da323cf&o=&hp=1"
     },
     {
@@ -305,7 +359,7 @@
       "type": "Villa",
       "name": "Villa Luxury",
       "area": 100,
-      "rentalCost": "1500 $",
+      "rentalCost": 1500,
       "maxPeople": "10",
       "rentalType": "Day",
       "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/429302385.jpg?k=4a999e5f7efce5f168c08a659ce858055b7796be9fa0fbd375228eb692f803d7&o=&hp=1"
@@ -315,7 +369,7 @@
       "type": "Villa",
       "name": "Villa Of Hoang",
       "area": 230,
-      "rentalCost": "2",
+      "rentalCost": 2,
       "maxPeople": "10",
       "rentalType": "Day",
       "descriptionOtherUtilities": "ewq",
@@ -330,7 +384,7 @@
       "type": "Villa",
       "name": "Villla Room So211",
       "area": 4,
-      "rentalCost": "12321",
+      "rentalCost": 12321,
       "maxPeople": "2",
       "rentalType": "Month",
       "descriptionOtherUtilities": "sadasdsa",
@@ -344,7 +398,7 @@
       "type": "Room",
       "name": "Room Vip",
       "area": 1000,
-      "rentalCost": "1000000",
+      "rentalCost": 1000000,
       "maxPeople": "5",
       "rentalType": "Year",
       "descriptionOtherUtilities": "",
@@ -354,6 +408,36 @@
       "freeServiceIncluded": "",
       "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
       "id": 14
+    },
+    {
+      "type": "House",
+      "name": "Thang V",
+      "area": 567,
+      "rentalCost": 1000000,
+      "maxPeople": "5",
+      "rentalType": "Month",
+      "descriptionOtherUtilities": "Nha bep, an sang",
+      "roomStandard": "213",
+      "numberFloors": 2,
+      "poolArea": "",
+      "freeServiceIncluded": "",
+      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
+      "id": 15
+    },
+    {
+      "type": "House",
+      "name": "Ho Vien",
+      "area": 3,
+      "rentalCost": 2333000,
+      "maxPeople": "23",
+      "rentalType": "Day",
+      "descriptionOtherUtilities": "Nha bep",
+      "roomStandard": "213",
+      "numberFloors": 1,
+      "poolArea": "",
+      "freeServiceIncluded": "",
+      "img": "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg",
+      "id": 16
     }
   ]
 }

@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as Yup from "yup"
-import { FallingLines, FidgetSpinner, ThreeDots } from "react-loader-spinner";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { findById } from "../../service/furamaService";
 
@@ -20,6 +18,7 @@ export function EditServiceComponent() {
         const findService = async () => {
         const res = await findById(param.id) ;
         setService(res)
+        setType(res.type)
         }
         findService()
     

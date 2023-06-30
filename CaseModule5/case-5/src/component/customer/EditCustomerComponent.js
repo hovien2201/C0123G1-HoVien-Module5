@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as Yup from "yup"
-import { FallingLines, FidgetSpinner, ThreeDots } from "react-loader-spinner";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export function EditCustomer() {
@@ -48,7 +46,7 @@ export function EditCustomer() {
                         .required('Không được để trống')
                     ,
                     email: Yup.string()
-                        .required('Không được để trống'),
+                        .required('Không được để trống').matches(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/),
                     identityCard: Yup.number()
                         .required('Không được để trống')
                         .min(0, 'Lớn hơn 0'),

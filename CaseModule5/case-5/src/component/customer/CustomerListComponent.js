@@ -2,15 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import * as Yup from "yup"
-import { FallingLines, FidgetSpinner, ThreeDots } from "react-loader-spinner";
 import { NavLink } from "react-router-dom";
-
-export function CustomerList() {
+import Swal from "sweetalert2";
+import ReactPaginate from "react-paginate"
+export function CustomerList({itemsPerPage}) {
     const [customers, setCustomer] = useState([])
-    const fetchApi = async () => {
+    const fetchApi = async (pageCount) => {
         try {
-            const result = await axios.get('http://localhost:8080/customer')
+            const result = await axios.get(`http://localhost:8080/customer`)
             setCustomer(result.data)
         } catch (e) {
             console.log(e)
@@ -21,6 +20,34 @@ export function CustomerList() {
         fetchApi()
     }, [])
 
+    
+
+
+
+
+    
+    const deleteCus = async (id) => {
+        await axios.delete('http://localhost:8080/customer/' + id)
+        Swal.fire({
+            icon: "success",
+            title: "Delete success",
+            timer: "3000"
+        })
+        fetchApi()
+    }
+    const deleteClick = async (id, name) => {
+        Swal.fire({
+            icon: "warning",
+            title: `Do you want to delete customer <span >${name}</span>?`,
+            showCancelButton: true,
+            confirmButtonText: "Oke"
+        })
+            .then((rs) => {
+                if (rs.isConfirmed) {
+                    deleteCus(id)
+                }
+            })
+    }
     return (
         <>
             <div className="body-content container-fluid" style={{ marginTop: "2%" }}>
@@ -47,7 +74,7 @@ export function CustomerList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {
+                        { 
                             customers.map((cus) => (
                                 <tr>
                                     <td>{cus.id}</td>
@@ -63,7 +90,7 @@ export function CustomerList() {
                                             Edit
                                         </NavLink>
                                         <a
-                                            href=""
+                                            onClick={() => deleteClick(cus.id, cus.name)}
                                             className="btn btn-danger"
                                             data-bs-toggle="modal"
                                             data-bs-target="#exampleModal"
@@ -77,56 +104,27 @@ export function CustomerList() {
                         }
                     </tbody>
                 </table>
-                <div className="page-content page-container" id="page-content">
-                    <div className="padding">
-                        <div className="row container d-flex justify-content-center">
-                            <div className="col-md-4 col-sm-6 grid-margin stretch-card">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <h4 className="card-title">Flat Pagination Round</h4>
-                                        <p className="card-description">
-                                            Flat pagination round Example
-                                        </p>
-                                        <nav>
-                                            <ul className="pagination d-flex justify-content-center flex-wrap pagination-rounded-flat pagination-success">
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        <i className="fa fa-angle-left" />
-                                                    </a>
-                                                </li>
-                                                <li className="page-item active">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        1
-                                                    </a>
-                                                </li>
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        2
-                                                    </a>
-                                                </li>
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        3
-                                                    </a>
-                                                </li>
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        4
-                                                    </a>
-                                                </li>
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        <i className="fa fa-angle-right" />
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{/*                 
+                <ReactPaginate
+                    nextLabel="next >"
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={3}
+                    marginPagesDisplayed={2}
+                    pageCount={itemsPerPage}
+                    previousLabel="< previous"
+                    pageClassName="page-item"
+                    pageLinkClassName="page-link"
+                    previousClassName="page-item"
+                    previousLinkClassName="page-link"
+                    nextClassName="page-item"
+                    nextLinkClassName="page-link"
+                    breakLabel="..."
+                    breakClassName="page-item"
+                    breakLinkClassName="page-link"
+                    containerClassName="pagination"
+                    activeClassName="active"
+                    renderOnZeroPageCount={null}
+                /> */}
             </div>
             <ToastContainer />
         </>

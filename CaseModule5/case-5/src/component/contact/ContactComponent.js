@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import * as Yup from "yup"
-
-import { FallingLines, FidgetSpinner, ThreeDots } from "react-loader-spinner";
 import { NavLink } from "react-router-dom";
 
 export function ContactList() {
@@ -37,13 +34,13 @@ export function ContactList() {
     return (
         <>
             <div className="body-content container-fluid" style={{ marginTop: "2%" }}>
-                <h1 className="text text-1 text-center">Contact List</h1>
+                <h1 className="text text-1 text-center">Contract List</h1>
                 <NavLink
                     to="/createContact"
                     className="btn btn-info"
                     style={{ float: "right", marginRight: "2%" }}
                 >
-                    Add New Contact
+                    Add New Contract
                 </NavLink>
                 <table className="table  table-hover text-center">
                     <thead className="table-light">
@@ -60,8 +57,8 @@ export function ContactList() {
                         {
                             contract.map((contract) => (
                                 <tr key={contract.id}>
-                                    <td>{contract.contractCode}</td>
-                                    <td>{customer.find((cus) => cus.id ==contract.customerId).name}</td>
+                                    <td>HD-{contract.id}</td>
+                                    <td>{customer.find((cus) => cus.id == contract.customerId).name}</td>
                                     {/* <td>{contract.customerId}</td> */}
                                     <td>{contract.dayStart}</td>
                                     <td>{contract.endDay}</td>

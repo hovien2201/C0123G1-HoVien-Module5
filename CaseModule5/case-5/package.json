@@ -14,12 +14,13 @@
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^5.3.4",
+    "react-paginate": "^8.2.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.2",
+    "sweetalert2": "11.7.12",
     "web-vitals": "^2.1.4",
-    "yup": "^1.0.2",
-    "sweetalert2": "11.7.12"
+    "yup": "^1.0.2"
   },
   "scripts": {
     "json-server": "json-server -p 8080 -w db.json",

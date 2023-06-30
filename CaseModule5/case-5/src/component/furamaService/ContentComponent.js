@@ -66,11 +66,13 @@ export function ContentComponent() {
                                         <h5
                                             style={{ fontWeight: "bold", fontFamily: "Serif", marginTop: "-4%", color: "black", width: "350px", height: "75px", marginLeft: "5%" }}
                                             className="title pt-4 pb-1">{list.name} </h5>
+                                            
                                     </div>
                                     <p className=""
                                         style={{ marginLeft: "5%", marginTop: "-2%" }}
                                     >Diện tích phòng: {list.area} m <sup>2</sup></p>
                                 </div>
+                                
                                 <div className="d-flex justify-content-center"
                                     style={{ marginTop: "1%", marginBottom: "2%", borderRadius: "30px" }}>
                                     <NavLink to={`/editService/${list.id}`} className="btn"
@@ -84,8 +86,11 @@ export function ContentComponent() {
                                     <button className="btn btn-danger" onClick={() => deleteClick(list.id, list.name)}
                                         style={{ marginLeft: "5%", width: "100px" }}
                                         data-bs-toggle="modal" data-bs-target="#exampleModal">Xoá</button>
+                                        
                                 </div>
                             </div>
+                            <div class="card-price">{list.type}</div>
+
                         </div>
                     ))}
 
