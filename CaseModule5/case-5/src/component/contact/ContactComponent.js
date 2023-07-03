@@ -6,8 +6,11 @@ import { NavLink } from "react-router-dom";
 
 export function ContactList() {
     const [contract, setContract] = useState([])
-    const [customer,setCustomer] =useState([])
-    const getAllCus = async () =>{
+    const [customer, setCustomer] = useState([])
+    const [currentPage, setCurrentPage] = useState(1);
+    const [contractsPerPage, setContractsPerPage] = useState(5);
+
+    const getAllCus = async () => {
         try {
             const result = await axios.get('http://localhost:8080/customer')
             setCustomer(result.data)
@@ -15,6 +18,7 @@ export function ContactList() {
             console.log(e)
         }
     }
+
     const fetchApi = async () => {
         try {
             const result = await axios.get('http://localhost:8080/contract')
@@ -23,11 +27,19 @@ export function ContactList() {
             console.log(e)
         }
     }
+
     useEffect(() => {
         getAllCus()
         fetchApi()
     }, [])
-    if(!customer){
+
+    const indexOfLastContract = currentPage * contractsPerPage;
+    const indexOfFirstContract = indexOfLastContract - contractsPerPage;
+    const currentContracts = contract.slice(indexOfFirstContract, indexOfLastContract);
+
+    const paginate = pageNumber => setCurrentPage(pageNumber);
+
+    if (!customer) {
         return null
     }
 
@@ -55,7 +67,7 @@ export function ContactList() {
                     </thead>
                     <tbody>
                         {
-                            contract.map((contract) => (
+                            currentContracts.map((contract) => (
                                 <tr key={contract.id}>
                                     <td>HD-{contract.id}</td>
                                     <td>{customer.find((cus) => cus.id == contract.customerId).name}</td>
@@ -83,34 +95,19 @@ export function ContactList() {
                                         </p>
                                         <nav>
                                             <ul className="pagination d-flex justify-content-center flex-wrap pagination-rounded-flat pagination-success">
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        <i className="fa fa-angle-left" />
+                                                <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+                                                    <a className="page-link" href="#" data-abc="true" onClick={() => paginate(currentPage - 1)}>
+                                                        <i className="fa fa-angle-left" />Back
                                                     </a>
                                                 </li>
-                                                <li className="page-item active">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        1
-                                                    </a>
-                                                </li>
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        2
-                                                    </a>
-                                                </li>
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        3
-                                                    </a>
-                                                </li>
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        4
-                                                    </a>
-                                                </li>
-                                                <li className="page-item">
-                                                    <a className="page-link" href="#" data-abc="true">
-                                                        <i className="fa fa-angle-right" />
+                                                {Array.from({ length: Math.ceil(contract.length / contractsPerPage) }, (item, index) => (
+                                                    <li key={index} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
+                                                        <a className="page-link" href="#" data-abc="true" onClick={() => paginate(index + 1)}>{index + 1}</a>
+                                                    </li>
+                                                ))}
+                                                <li className={`page-item ${currentPage === Math.ceil(contract.length / contractsPerPage) ? 'disabled' : ''}`}>
+                                                    <a className="page-link" href="#" data-abc="true" onClick={() => paginate(currentPage + 1)}>
+                                                        <i className="fa fa-angle-right" />Next
                                                     </a>
                                                 </li>
                                             </ul>
@@ -124,5 +121,5 @@ export function ContactList() {
             </div>
             <ToastContainer />
         </>
-    )
-}
+        )
+    }

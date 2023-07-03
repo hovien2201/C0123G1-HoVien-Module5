@@ -20,12 +20,12 @@ export function CustomerList({itemsPerPage}) {
         fetchApi()
     }, [])
 
-    
 
 
 
 
-    
+
+
     const deleteCus = async (id) => {
         await axios.delete('http://localhost:8080/customer/' + id)
         Swal.fire({
